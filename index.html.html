@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr-BE">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MapsClean • Service de nettoyage premium en Belgique</title>
+  <meta name="description" content="MapsClean relie des clients à des professionnels de nettoyage fiables et assurés. Réservation rapide, prix transparents et satisfaction garantie." />
+  <meta name="theme-color" content="#5b6cff" />
+  <style>
+    :root{
+      --primary:#5b6cff;
+      --secondary:#9a6cff;
+      --pink:#b86cff;
+      --bg:#0c0d12;
+      --text:#0f1222;
+      --muted:#647084;
+      --radius:18px;
+      --shadow:0 10px 30px rgba(30,30,70,.18);
+      --gradient: linear-gradient(135deg, #5b6cff 0%, #6a77ff 20%, #7c6cff 40%, #9a6cff 60%, #b86cff 100%);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{font-family: Inter, Roboto, system-ui, sans-serif; background:#fff; color:#122; line-height:1.55}
+    a{text-decoration:none;color:inherit}
+
+    .hero{position:relative;overflow:hidden;text-align:center;padding:88px 20px 72px;background:var(--gradient);background-size:200% 200%;animation:gradientShift 18s ease infinite;color:#fff}
+    .hero .logo{width:min(220px,48vw);filter:drop-shadow(0 6px 20px rgba(0,0,0,.25))}
+    .hero h1{font-size:clamp(30px,6vw,56px);margin:18px auto 12px;font-weight:800}
+    .hero p.lead{font-size:clamp(16px,2.4vw,22px);opacity:.95;max-width:880px;margin:0 auto 28px}
+
+    section{padding:72px 0}
+    .wrap{max-width:1160px;padding:0 20px;margin:0 auto}
+    .grid{display:grid;gap:26px}
+    @media(min-width:900px){.grid.cols-2{grid-template-columns:1.1fr .9fr}}
+    .card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:26px}
+    .h2{font-size:clamp(24px,3.6vw,36px);margin:0 0 10px;color:var(--text)}
+    .sub{color:var(--muted)}
+
+    .marquee{background:linear-gradient(90deg,#f6f8ff,#fbf6ff);border-top:1px solid #eef2ff;border-bottom:1px solid #f1e9ff;overflow:hidden}
+    .marquee-track{display:flex;gap:46px;white-space:nowrap;animation:slide 24s linear infinite;padding:16px 0;color:#334}
+    @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+    .tile{background:#f7f9ff;border-radius:16px;padding:22px;box-shadow:var(--shadow)}
+
+    .faq{max-width:920px}
+    details{background:#fff;border-radius:16px;padding:18px 20px;box-shadow:var(--shadow);margin:14px 0}
+    summary{cursor:pointer;font-weight:800}
+
+    .cta{background:var(--gradient);color:#fff;text-align:center;border-top-left-radius:32px;border-top-right-radius:32px}
+    .cta .cta-inner{max-width:920px;margin:0 auto;position:relative;overflow:hidden;padding:64px 20px 56px}
+    .cta .logo-dark{width:min(200px,40vw)}
+
+    .btn{display:inline-flex;align-items:center;gap:12px;padding:16px 22px;border-radius:14px;font-weight:700;box-shadow:var(--shadow);transition:.3s transform,.25s box-shadow;position:relative;overflow:hidden}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(30,30,70,.25)}
+    .btn .ico{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:10px;background:rgba(255,255,255,.18)}
+    .btn svg{width:22px;height:22px}
+    .btn.whatsapp{background:#25d366;color:#fff}
+    .btn.gmail{background:#fff;color:#202124;border:1px solid rgba(0,0,0,.08)}
+
+    @keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+    .clean-sweep{pointer-events:none;position:absolute;inset:-20%;background:linear-gradient(100deg,transparent 0%,rgba(255,255,255,.35) 50%,transparent 100%);transform:translateX(-120%);animation:sweep 12s ease-in-out infinite}
+    @keyframes sweep{0%{transform:translateX(-120%)}50%{transform:translateX(10%)}100%{transform:translateX(120%)}}
+    .sparkle{position:absolute;width:10px;height:10px;border-radius:50%;background:radial-gradient(circle,#fff 0 30%,transparent 70%);animation:twinkle 2.5s ease-in-out infinite}
+    @keyframes twinkle{0%,100%{opacity:.5;transform:scale(.6)}50%{opacity:1;transform:scale(1.1) rotate(10deg)}}
+
+    footer{padding:26px 0;text-align:center;color:#57607a}
+  </style>
+</head>
+<body>
+  <header class="hero" id="home">
+    <img class="logo" src="logo.servi.png" alt="MapsClean logo"/>
+    <h1>Service de nettoyage premium, simple et fiable</h1>
+    <p class="lead">À Bruxelles et alentours, MapsClean vous met en relation avec des professionnels de confiance. Réservez en quelques clics et profitez d’un intérieur impeccable.</p>
+    <span class="clean-sweep"></span>
+    <span class="sparkle" style="left:20%;top:30%"></span>
+    <span class="sparkle" style="right:25%;top:40%"></span>
+  </header>
+
+  <section class="wrap grid cols-2" id="mission">
+    <div class="card">
+      <h2 class="h2">Notre mission</h2>
+      <p class="sub">Des services de nettoyage <strong>sécurisés, ponctuels et transparents</strong>, grâce à la géolocalisation et un réseau de prestataires indépendants.</p>
+    </div>
+    <div class="card" style="display:flex;align-items:center;justify-content:center">
+      <img src="logo.png" alt="MapsClean logo couleurs" style="width:min(360px,80%)"/>
+    </div>
+  </section>
+
+  <div class="marquee"><div class="marquee-track">
+    <span>✨ Résidentiel</span><span>🧼 Bureaux</span><span>🧽 Fin de chantier</span><span>🧺 Nettoyage de printemps</span><span>🚚 Entrée/Sortie</span>
+  </div></div>
+
+  <section class="wrap" id="galerie">
+    <h2 class="h2">Un rendu impeccable</h2>
+    <p class="sub">Des gestes précis, des produits adaptés et une exigence de détail : c’est notre signature.</p>
+  </section>
+
+  <section class="cta" id="contact">
+    <div class="cta-inner">
+      <img class="logo-dark" src="logo.servi.png" alt="MapsClean logo"/>
+      <h2 class="h2">Parlons de votre prochain nettoyage</h2>
+      <p>Obtenez un devis rapide via nos canaux directs :</p>
+      <div class="badges" style="margin-top:18px">
+        <a class="btn whatsapp icon" href="https://wa.me/32471484571?text=Bonjour%20MapsClean%2C%20je%20souhaite%20un%20devis." target="_blank" rel="noopener">
+          <span class="ico">
+            <svg viewBox="0 0 48 48"><path fill="#fff" d="M24 4C12.95 4 4 12.95 4 24c0 4.27 1.37 8.22 3.73 11.44L6 44l9-2.64C18 43.33 20.95 44 24 44c11.05 0 20-8.95 20-20S35.05 4 24 4Z"/></svg>
+          </span> WhatsApp
+        </a>
+        <a class="btn gmail icon" href="mailto:support@mapsclean.com?subject=Demande%20devis">
+          <span class="ico">
+            <svg viewBox="0 0 48 48"><path fill="#EA4335" d="M24 24 4 12v24h8V20l12 9 12-9v16h8V12Z"/></svg>
+          </span> Gmail
+        </a>
+      </div>
+      <span class="clean-sweep"></span>
+      <span class="sparkle" style="left:10%;bottom:20%"></span>
+      <span class="sparkle" style="right:15%;bottom:25%"></span>
+    </div>
+  </section>
+
+  <footer><small>© <span id="y"></span> MapsClean • Bruxelles, Belgique</small></footer>
+
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
